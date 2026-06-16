@@ -100,6 +100,16 @@ body {
   color: var(--text-primary);
 }
 
+#biodata .container {
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  padding: 2rem;
+  background: var(--card-bg);
+}
+[data-theme="dark"] #biodata .container {
+  border-color: #333;
+}
+
 /* Icons */
 .icon-lg {
   font-size: 2.5rem;
