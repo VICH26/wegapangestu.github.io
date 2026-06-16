@@ -96,9 +96,6 @@ body {
 [data-theme="dark"] .profile-frame::before {
   background: var(--card-bg);
 }
-[data-theme="dark"] .table {
-  color: var(--text-primary);
-}
 
 #biodata .container {
   border: 1px solid #dee2e6;
@@ -108,6 +105,17 @@ body {
 }
 [data-theme="dark"] #biodata .container {
   border-color: #333;
+}
+[data-theme="dark"] .table {
+  --bs-table-bg: transparent;
+  color: var(--text-primary);
+}
+[data-theme="dark"] .table td {
+  background: transparent;
+  color: var(--text-primary);
+}
+.table td {
+  background: transparent;
 }
 
 /* Icons */
