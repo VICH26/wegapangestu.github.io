@@ -17,6 +17,10 @@
   --card-bg: #1e1e1e;
   --card-shadow: rgba(0,0,0,0.4);
   --section-bg-alt: #1a1a1a;
+  --bs-body-color: #e4e4e4;
+  --bs-body-color-rgb: 228, 228, 228;
+  --bs-card-color: #e4e4e4;
+  --bs-heading-color: #e4e4e4;
 }
 
 body {
@@ -92,6 +96,10 @@ body {
   transition: 0.2s;
 }
 
+[data-theme="dark"] {
+  --bs-body-color: #e4e4e4;
+  --bs-body-color-rgb: 228, 228, 228;
+}
 [data-theme="dark"] .profile-card {
   background: var(--card-bg);
   box-shadow: 0 12px 40px rgba(0,0,0,0.4);
@@ -114,6 +122,22 @@ body {
 }
 .table td {
   background: transparent;
+}
+[data-theme="dark"] .card,
+[data-theme="dark"] .card-body,
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .card-text,
+[data-theme="dark"] .card-header,
+[data-theme="dark"] .card-footer,
+[data-theme="dark"] .list-group-item,
+[data-theme="dark"] h1, [data-theme="dark"] h2,
+[data-theme="dark"] h3, [data-theme="dark"] h4,
+[data-theme="dark"] h5, [data-theme="dark"] h6,
+[data-theme="dark"] .h1, [data-theme="dark"] .h2,
+[data-theme="dark"] .h3, [data-theme="dark"] .h4,
+[data-theme="dark"] .h5, [data-theme="dark"] .h6,
+[data-theme="dark"] [class*="text-body"] {
+  color: var(--text-primary) !important;
 }
 [data-theme="dark"] .table,
 [data-theme="dark"] .table td {
