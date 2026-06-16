@@ -90,6 +90,16 @@ body {
   transition: 0.2s;
 }
 
+[data-theme="dark"] .profile-card {
+  background: var(--card-bg);
+}
+[data-theme="dark"] .profile-frame::before {
+  background: var(--card-bg);
+}
+[data-theme="dark"] .table {
+  color: var(--text-primary);
+}
+
 /* Icons */
 .icon-lg {
   font-size: 2.5rem;
