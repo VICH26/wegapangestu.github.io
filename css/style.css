@@ -106,13 +106,8 @@ body {
 [data-theme="dark"] #biodata .container {
   border-color: #333;
 }
-[data-theme="dark"] .table {
+.table {
   --bs-table-bg: transparent;
-  color: var(--text-primary);
-}
-[data-theme="dark"] .table td {
-  background: transparent;
-  color: var(--text-primary);
 }
 .table td {
   background: transparent;
