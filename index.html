@@ -14,8 +14,11 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
-    <div class="container">
-      <span class="navbar-brand fw-bold"><i class="fas fa-user-circle me-2"></i>Wega Pangestu</span>
+    <div class="container d-flex align-items-center">
+      <span class="navbar-brand fw-bold me-auto"><i class="fas fa-user-circle me-2"></i>Wega Pangestu</span>
+      <button class="theme-toggle me-2" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,9 +34,6 @@
           <li class="nav-item"><a class="nav-link" href="#pekerjaan">Pekerjaan</a></li>
           <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
         </ul>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <i class="fas fa-moon"></i>
-        </button>
       </div>
     </div>
   </nav>
@@ -51,7 +51,7 @@
       <div class="row justify-content-center mt-5 g-3">
         <div class="col-4 col-md-3">
           <div class="stat-item">
-            <h3 class="fw-bold mb-0 display-6">1</h3>
+            <h3 class="fw-bold mb-0 display-6">3</h3>
             <small class="text-uppercase text-white-50" style="letter-spacing:1px;">Project</small>
           </div>
         </div>
@@ -500,35 +500,6 @@
       once: true,
       offset: 100
     });
-
-    // Contact form
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const fb = document.getElementById('formFeedback');
-        fb.className = 'form-feedback';
-        fb.textContent = 'Mengirim...';
-        fb.classList.add('show');
-        try {
-          const res = await fetch(this.action, {
-            method: 'POST',
-            body: new FormData(this),
-            headers: { 'Accept': 'application/json' }
-          });
-          if (res.ok) {
-            fb.className = 'form-feedback success show';
-            fb.textContent = '✓ Pesan berhasil dikirim! Saya akan menghubungi Anda segera.';
-            this.reset();
-          } else {
-            throw new Error('Gagal mengirim');
-          }
-        } catch {
-          fb.className = 'form-feedback error show';
-          fb.textContent = '✗ Gagal mengirim pesan. Silakan coba lagi atau kirim langsung ke wegapangestuu@gmail.com.';
-        }
-      });
-    }
 
     // Lightbox
     document.querySelectorAll('.sertif-img-wrap img').forEach(img => {
