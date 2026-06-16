@@ -1,0 +1,332 @@
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-dark: #1a1e2c;
+  --text-primary: #212529;
+  --text-muted: #6c757d;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0,0,0,0.08);
+  --section-bg-alt: #f8f9fa;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #e4e4e4;
+  --text-muted: #aaaaaa;
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(0,0,0,0.4);
+  --section-bg-alt: #1a1a1a;
+}
+
+body {
+  padding-top: 56px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+  background: #1a1e2c !important;
+  transition: padding 0.3s, background 0.3s;
+}
+.navbar.navbar-shrink {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  background: rgba(26,30,44,0.95) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Jumbotron */
+.jumbotron-custom {
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('../img/AWS.jpg') center/cover no-repeat;
+  color: #fff;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Profile */
+.profile-img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.profile-frame {
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  box-shadow: 0 8px 30px rgba(13,110,253,0.3);
+}
+.profile-frame::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 16px;
+  background: #fff;
+  z-index: 0;
+}
+.profile-frame img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  border-radius: 14px;
+}
+.profile-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+}
+.profile-card .text-secondary:hover {
+  color: #0d6efd !important;
+  transition: 0.2s;
+}
+
+/* Icons */
+.icon-lg {
+  font-size: 2.5rem;
+  color: #0d6efd;
+}
+
+/* Card hover */
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.bg-light {
+  background: var(--section-bg-alt) !important;
+}
+
+.card {
+  background: var(--card-bg) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.project-card {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: var(--card-bg);
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.project-thumb {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: #e9ecef;
+}
+.project-thumb-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #0d6efd22, #6610f222);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #0d6efd;
+}
+
+/* Section title */
+.section-title {
+  position: relative;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0d6efd;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Text justify */
+.text-justify {
+  text-align: justify;
+}
+
+/* Badge skill */
+.badge-skill {
+  display: inline-block;
+  background: #e9ecef;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin: 4px;
+  font-size: 0.9rem;
+}
+.badge-skill i {
+  margin-right: 6px;
+  color: #0d6efd;
+}
+
+/* Footer */
+footer {
+  background: #1a1e2c;
+}
+footer .sosmed a:hover {
+  color: #0d6efd !important;
+  transition: 0.2s;
+}
+
+/* Nav active */
+.navbar-nav .nav-link.active {
+  color: #0d6efd !important;
+}
+
+/* Sertifikat */
+.sertif-img-wrap {
+  max-height: 170px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: max-height 0.4s ease;
+  background: #f1f3f5;
+}
+.sertif-img-wrap img {
+  width: 100%;
+  display: block;
+}
+.sertif-card {
+  transition: 0.3s;
+}
+.sertif-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.sertif-card:hover .sertif-img-wrap {
+  max-height: 600px;
+}
+
+/* Award */
+.award-side {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  padding: 30px;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+}
+
+.badge-sm {
+  font-size: 0.85rem;
+}
+
+/* Stats */
+.stat-item {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 16px 8px;
+  transition: 0.3s;
+}
+.stat-item:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-3px);
+}
+
+/* Form Feedback */
+.form-feedback {
+  display: none;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+.form-feedback.show {
+  display: block;
+}
+.form-feedback.success {
+  background: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+.form-feedback.error {
+  background: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: none;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 12px;
+}
+.theme-toggle:hover {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.lightbox-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+.lightbox-overlay .lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 10000;
+  transition: 0.2s;
+}
+.lightbox-overlay .lightbox-close:hover {
+  color: #0d6efd;
+}
+.sertif-img-wrap {
+  cursor: pointer;
+}
+
+
