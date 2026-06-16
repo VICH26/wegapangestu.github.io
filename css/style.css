@@ -115,6 +115,10 @@ body {
 .table td {
   background: transparent;
 }
+[data-theme="dark"] .table,
+[data-theme="dark"] .table td {
+  color: var(--text-primary);
+}
 
 /* Icons */
 .icon-lg {
